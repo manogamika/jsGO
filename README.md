@@ -1,5 +1,5 @@
 # jsGO
-Simulator sintaks JavaScript sederhana yang didesain untuk keperluan pendidikan dalam memperkenalkan konsep dasar bahasa pemrograman JavaScript
+Simulator sintaks JavaScript sederhana yang didesain untuk keperluan pendidikan dalam memperkenalkan konsep dasar bahasa pemrograman JavaScript,berbasis web (html5,css,javascript)
 
 A simple JavaScript syntax simulator designed for educational purposes in introducing basic JavaScript language concepts.
 
