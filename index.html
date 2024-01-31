@@ -1,37 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="data/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css" rel="stylesheet">
-  <script src="data/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
-<script src="data/code.jquery.com_jquery-3.6.0.min.js"></script>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="data/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css" rel="stylesheet">
+	<script src="data/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
+	<script src="data/code.jquery.com_jquery-3.6.0.min.js"></script>
+	<script script src="data/js/dark.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="data/css/ux.css">
 </head>
-<style>
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0; 
-        }
 
-     
-        .centered-content {
-            background-color: #f0f0f0;
-            padding: 20px;
-            border: 1px solid #ccc;
-            text-align: center;
-        }
-</style>
 <body class="centered-content">
 <div class="container mt-5">
   <div class="row">
 
 <div style="text-align: center;">
-<h3><h2>{js}-GO</h3>
+<h3>{js}-GO</h3>
     <button id="clearButton" class="btn"><img src="data/img/clear.png" width="40" height="40"></button>
 
     <button id="saveButton" class="btn"><img src="data/img/1.png" width="40" height="40"></button>
@@ -176,157 +161,8 @@ $(document).ready(function() {
 
 
 
-<style>
-/* Animasi zoom in */
-@keyframes zoomIn {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-/* Animasi zoom out */
-@keyframes zoomOut {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
-
-/* Gaya untuk modal dengan animasi zoom in */
-.modal.zoom-in {
-  animation: zoomIn 0.3s forwards;
-}
-
-/* Gaya untuk modal dengan animasi zoom out */
-.modal.zoom-out {
-  animation: zoomOut 0.3s forwards;
-}
-
-/* Gaya untuk modal dalam mode gelap */
-.dark-mode .modal-content {
-  background-color: #333; /* Warna latar belakang modal */
-  color: #fff; /* Warna teks dalam modal */
-  border-color: #444; /* Warna border modal */
-}
-
-/* Gaya untuk tombol dalam modal ketika dalam mode gelap */
-.dark-mode .btn-primary {
-  background-color: #007bff; /* Warna latar belakang tombol primer */
-  border-color: #007bff; /* Warna border tombol primer */
-  color: #fff; /* Warna teks tombol primer */
-}
-
-/* Gaya untuk tombol dalam modal ketika dalam mode gelap */
-.dark-mode .btn-secondary {
-  background-color: #6c757d; /* Warna latar belakang tombol sekunder */
-  border-color: #6c757d; /* Warna border tombol sekunder */
-  color: #fff; /* Warna teks tombol sekunder */
-}
-
-/* Gaya untuk pre dalam modal ketika dalam mode gelap */
-.dark-mode #outputModalContent {
-  background-color: #333; /* Warna latar belakang pre */
-  color: #fff; /* Warna teks pre */
-  border-color: #444; /* Warna border pre */
-}
-
-/* Dark Mode */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-/* Dark Mode - Ganti warna tombol */
-.btn-dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-/* Gaya untuk textarea dalam mode gelap */
-.dark-mode textarea {
-  background-color: #333; /* Warna latar belakang */
-  color: #fff; /* Warna teks */
-  border-color: #444; /* Warna border */
-}
 
 
-/* Gaya untuk pre dalam modal ketika dalam mode gelap */
-.dark-mode #outputModalContent {
-  background-color: #333; /* Warna latar belakang */
-  color: #fff; /* Warna teks */
-  border-color: #444; /* Warna border */
-}
-
-/* Dark Mode untuk outputModalContent */
-#outputModalContent.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-  border-color: #333;
-}
-
-/* Dark Mode */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-/* Dark Mode - Ganti warna tombol */
-.btn-dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-/* Dark Mode - Ganti warna border textarea */
-textarea.dark-mode {
-  border-color: #333;
-}
-</style>
-<script>
-// Fungsi untuk mengaktifkan dark mode
-
-
-// JavaScript untuk mengganti mode
-$(document).ready(function() {
-  const body = document.body;
-  const toggleDarkModeButton = document.getElementById('toggleDarkModeButton');
-  const isDarkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
-
-  // Fungsi untuk mengaktifkan dark mode
-  function enableDarkMode() {
-    body.classList.add('dark-mode');
-    toggleDarkModeButton.innerText = '☼  Mode Terang';
-    localStorage.setItem('darkMode', 'enabled');
-  }
-
-  // Fungsi untuk menonaktifkan dark mode
-  function disableDarkMode() {
-    body.classList.remove('dark-mode');
-    toggleDarkModeButton.innerText = '☾ Mode Gelap';
-    localStorage.setItem('darkMode', 'disabled');
-  }
-
-  // Inisialisasi mode berdasarkan status yang tersimpan di localStorage
-  if (isDarkModeEnabled) {
-    enableDarkMode();
-  } else {
-    disableDarkMode();
-  }
-
-  // Toggle mode ketika tombol ditekan
-  toggleDarkModeButton.addEventListener('click', function() {
-    if (body.classList.contains('dark-mode')) {
-      disableDarkMode();
-    } else {
-      enableDarkMode();
-    }
-  });
-});
-</script>
 
 <script>
 $(document).ready(function() {
