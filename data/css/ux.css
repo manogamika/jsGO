@@ -1,0 +1,125 @@
+<style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0; 
+        }
+
+     
+        .centered-content {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+/* Animasi zoom in */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Animasi zoom out */
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+/* Gaya untuk modal dengan animasi zoom in */
+.modal.zoom-in {
+  animation: zoomIn 0.3s forwards;
+}
+
+/* Gaya untuk modal dengan animasi zoom out */
+.modal.zoom-out {
+  animation: zoomOut 0.3s forwards;
+}
+
+/* Gaya untuk modal dalam mode gelap */
+.dark-mode .modal-content {
+  background-color: #333; /* Warna latar belakang modal */
+  color: #fff; /* Warna teks dalam modal */
+  border-color: #444; /* Warna border modal */
+}
+
+/* Gaya untuk tombol dalam modal ketika dalam mode gelap */
+.dark-mode .btn-primary {
+  background-color: #007bff; /* Warna latar belakang tombol primer */
+  border-color: #007bff; /* Warna border tombol primer */
+  color: #fff; /* Warna teks tombol primer */
+}
+
+/* Gaya untuk tombol dalam modal ketika dalam mode gelap */
+.dark-mode .btn-secondary {
+  background-color: #6c757d; /* Warna latar belakang tombol sekunder */
+  border-color: #6c757d; /* Warna border tombol sekunder */
+  color: #fff; /* Warna teks tombol sekunder */
+}
+
+/* Gaya untuk pre dalam modal ketika dalam mode gelap */
+.dark-mode #outputModalContent {
+  background-color: #333; /* Warna latar belakang pre */
+  color: #fff; /* Warna teks pre */
+  border-color: #444; /* Warna border pre */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark Mode - Ganti warna tombol */
+.btn-dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Gaya untuk textarea dalam mode gelap */
+.dark-mode textarea {
+  background-color: #333; /* Warna latar belakang */
+  color: #fff; /* Warna teks */
+  border-color: #444; /* Warna border */
+}
+
+
+/* Gaya untuk pre dalam modal ketika dalam mode gelap */
+.dark-mode #outputModalContent {
+  background-color: #333; /* Warna latar belakang */
+  color: #fff; /* Warna teks */
+  border-color: #444; /* Warna border */
+}
+
+/* Dark Mode untuk outputModalContent */
+#outputModalContent.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+  border-color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark Mode - Ganti warna tombol */
+.btn-dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Dark Mode - Ganti warna border textarea */
+textarea.dark-mode {
+  border-color: #333;
+}
+</style>
